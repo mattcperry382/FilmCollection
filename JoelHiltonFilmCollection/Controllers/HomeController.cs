@@ -38,6 +38,8 @@ namespace JoelHiltonFilmCollection.Controllers
         [HttpPost]
         public IActionResult AddMovie(FilmCollection fc)
         {
+            HomeContext.Add(fc);
+            HomeContext.SaveChanges();
             return View("Confirmation", fc);
         }
 
