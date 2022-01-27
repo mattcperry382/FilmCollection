@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JoelHiltonFilmCollection.Models
 {
-    public class FilmCollectionContext
+    public class FilmCollectionContext : DbContext
     {
         public FilmCollectionContext(DbContextOptions<FilmCollectionContext> options) : base(options)
         {
@@ -26,29 +26,27 @@ namespace JoelHiltonFilmCollection.Models
                     Year = "1987",
                     Director = "John McTiernan",
                     Rating = "R",
-                    Edited = true,
-                    LentTo = "",
-                    Notes = ""
+                    Edited = true
                 },
                 new FilmCollection
                 {
-                    Id = 1,
+                    Id = 2,
                     Category = "Action/Adventure",
                     Title = "Avengers, The",
                     Year = "2012",
                     Director = "Joss Whedon",
                     Rating = "PG-13",
-                    LentTo = "",
-                    Notes = ""
+                    Edited = false
                 },
                 new FilmCollection
                 {
-                    Id = 1,
+                    Id = 3,
                     Category = "Action/Adventure",
                     Title = "Lord of the Rings: The Return of the King, The",
                     Year = "2003",
                     Director = "Peter Jackson",
-                    Rating = "PG-13"
+                    Rating = "PG-13",
+                    Edited = false
                 }
             );
         }

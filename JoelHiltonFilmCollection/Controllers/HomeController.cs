@@ -12,10 +12,11 @@ namespace JoelHiltonFilmCollection.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private FilmCollectionContext HomeContext;
+        public HomeController(ILogger<HomeController> logger, FilmCollectionContext fcc)
         {
             _logger = logger;
+            HomeContext = fcc;
         }
 
         public IActionResult Index()
