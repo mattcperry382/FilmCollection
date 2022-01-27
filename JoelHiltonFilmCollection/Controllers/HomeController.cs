@@ -28,6 +28,18 @@ namespace JoelHiltonFilmCollection.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult AddMovie()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddMovie(FilmCollection fc)
+        {
+            return View("Confirmation", fc);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
