@@ -10,9 +10,8 @@ namespace JoelHiltonFilmCollection.Models
     {
         [Key]
         [Required]
-        public int Id { get; set; }
-        [Required]
-        public string Category { get; set; }
+        public int FilmId { get; set; }
+        
         [Required]
         public string Title { get; set; }
         [Required]
@@ -25,5 +24,9 @@ namespace JoelHiltonFilmCollection.Models
         public string LentTo { get; set; }
         [Range(0,25)]
         public string Notes { get; set; }
+        // Category Table
+        public int CategoryId { get; set; }
+        [Required(ErrorMessage = "Please select a Category.")]
+        public Category Category { get; set; }
     }
 }

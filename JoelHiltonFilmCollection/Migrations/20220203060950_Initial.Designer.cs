@@ -2,14 +2,16 @@
 using JoelHiltonFilmCollection.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace JoelHiltonFilmCollection.Migrations
 {
     [DbContext(typeof(FilmCollectionContext))]
-    partial class FilmCollectionContextModelSnapshot : ModelSnapshot
+    [Migration("20220203060950_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
